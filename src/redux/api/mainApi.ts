@@ -7,7 +7,7 @@ export const mainApi = createApi({
   }),
   endpoints: build => ({
     getItems: build.query({
-      query: (params) => `?_limit=8&page=${params.page}&title=${params.search}`
+      query: (params) => `?_limit=8&_page=${params.page}${params.search ? `&q=${params.search}` : ''}${params.category ? `&category=${params.category}` : ''}`
     })
   })
 })

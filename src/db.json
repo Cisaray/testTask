@@ -20,6 +20,195 @@
       "imageUrl": "/assets/photos/clothes.jpg",
       "price": "2000",
       "category": "cloth"
+    },
+    {
+      "id": 4,
+      "title": "Домашняя пицца",
+      "imageUrl": "/assets/photos/tastyFood.jpg",
+      "price": "350",
+      "category": "food"
+    },
+    {
+      "id": 5,
+      "title": "Фен Dyson",
+      "imageUrl": "/assets/photos/vacuumCleaner.jpg",
+      "price": "8800",
+      "category": "technique"
+    },
+    {
+      "id": 6,
+      "title": "Юбка женская",
+      "imageUrl": "/assets/photos/clothes.jpg",
+      "price": "1500",
+      "category": "cloth"
+    },
+    {
+      "id": 7,
+      "title": "Оладьи",
+      "imageUrl": "/assets/photos/tastyFood.jpg",
+      "price": "150",
+      "category": "food"
+    },
+    {
+      "id": 8,
+      "title": "Ноутбук Lenovo",
+      "imageUrl": "/assets/photos/vacuumCleaner.jpg",
+      "price": "98000",
+      "category": "technique"
+    },
+    {
+      "id": 9,
+      "title": "Туфли",
+      "imageUrl": "/assets/photos/clothes.jpg",
+      "price": "3250",
+      "category": "cloth"
+    },
+    {
+      "id": 10,
+      "title": "Пицца Пепперони",
+      "imageUrl": "/assets/photos/tastyFood.jpg",
+      "price": "450",
+      "category": "food"
+    },
+    {
+      "id": 11,
+      "title": "Ноутбук Asus",
+      "imageUrl": "/assets/photos/vacuumCleaner.jpg",
+      "price": "122000",
+      "category": "technique"
+    },
+    {
+      "id": 12,
+      "title": "Босоножки",
+      "imageUrl": "/assets/photos/clothes.jpg",
+      "price": "1000",
+      "category": "cloth"
+    },
+    {
+      "id": 13,
+      "title": "Салат Оливье 1кг",
+      "imageUrl": "/assets/photos/tastyFood.jpg",
+      "price": "600",
+      "category": "food"
+    },
+    {
+      "id": 14,
+      "title": "IPhone",
+      "imageUrl": "/assets/photos/vacuumCleaner.jpg",
+      "price": "95000",
+      "category": "technique"
+    },
+    {
+      "id": 15,
+      "title": "Нижнее белье",
+      "imageUrl": "/assets/photos/clothes.jpg",
+      "price": "6000",
+      "category": "cloth"
+    },
+    {
+      "id": 16,
+      "title": "Салат Крабовый 1кг",
+      "imageUrl": "/assets/photos/tastyFood.jpg",
+      "price": "650",
+      "category": "food"
+    },
+    {
+      "id": 17,
+      "title": "Телефон Xiaomi",
+      "imageUrl": "/assets/photos/vacuumCleaner.jpg",
+      "price": "60000",
+      "category": "technique"
+    },
+    {
+      "id": 18,
+      "title": "Брюки женские",
+      "imageUrl": "/assets/photos/clothes.jpg",
+      "price": "3500",
+      "category": "cloth"
+    },
+    {
+      "id": 19,
+      "title": "Запеченая курица с грибами 1кг",
+      "imageUrl": "/assets/photos/tastyFood.jpg",
+      "price": "1500",
+      "category": "food"
+    },
+    {
+      "id": 20,
+      "title": "Телефон Samsung",
+      "imageUrl": "/assets/photos/vacuumCleaner.jpg",
+      "price": "78999",
+      "category": "technique"
+    },
+    {
+      "id": 21,
+      "title": "Кроссовки мужские",
+      "imageUrl": "/assets/photos/clothes.jpg",
+      "price": "5000",
+      "category": "cloth"
+    },
+    {
+      "id": 22,
+      "title": "Курица по-французски 1кг",
+      "imageUrl": "/assets/photos/tastyFood.jpg",
+      "price": "1200",
+      "category": "food"
+    },
+    {
+      "id": 23,
+      "title": "Фитнес-браслет MiBand8",
+      "imageUrl": "/assets/photos/vacuumCleaner.jpg",
+      "price": "4000",
+      "category": "technique"
+    },
+    {
+      "id": 24,
+      "title": "Шорты мужские",
+      "imageUrl": "/assets/photos/clothes.jpg",
+      "price": "2000",
+      "category": "cloth"
+    },
+    {
+      "id": 25,
+      "title": "Паста Карбонара",
+      "imageUrl": "/assets/photos/tastyFood.jpg",
+      "price": "250",
+      "category": "food"
+    },
+    {
+      "id": 26,
+      "title": "Playstation 5 825gb",
+      "imageUrl": "/assets/photos/vacuumCleaner.jpg",
+      "price": "70000",
+      "category": "technique"
+    },
+    {
+      "id": 27,
+      "title": "Футболка мужская",
+      "imageUrl": "/assets/photos/clothes.jpg",
+      "price": "2000",
+      "category": "cloth"
+    },
+    {
+      "id": 28,
+      "title": "Борш",
+      "imageUrl": "/assets/photos/tastyFood.jpg",
+      "price": "189",
+      "category": "food"
+    },
+    {
+      "id": 29,
+      "title": "Xbox Series X",
+      "imageUrl": "/assets/photos/vacuumCleaner.jpg",
+      "price": "60000",
+      "category": "technique"
+    },
+    {
+      "id": 30,
+      "title": "Плавки мужские",
+      "imageUrl": "/assets/photos/clothes.jpg",
+      "price": "700",
+      "category": "cloth"
     }
   ]
 }

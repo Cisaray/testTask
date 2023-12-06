@@ -1,10 +1,15 @@
 import React, {FC, useCallback, useState} from 'react';
+import {useAppDispatch, useAppSelector} from "../redux/hooks";
+import {setCategory} from "../redux/slices";
 
 export const CategoryFilterBar: FC = () => {
+  const dispatch = useAppDispatch()
+  // const {category} = useAppSelector(state => state.categoryReducer)
   const [clicked, setClicked] = useState<string>('Все товары');
   const handleChangeCategory = useCallback((str: string) => {
     setClicked(str)
-  },[])
+    dispatch(setCategory(str))
+  },[dispatch])
   return (
     <div className='flex items-center justify-start w-full gap-10 mt-10'>
       <div className='cursor-pointer' onClick={() => handleChangeCategory('Все товары')}>

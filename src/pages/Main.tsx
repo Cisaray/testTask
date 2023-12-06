@@ -1,14 +1,23 @@
-import React, {FC, useState} from 'react';
+import React, {FC, useCallback, useState} from 'react';
 import {SearchBar} from "../components/SearchBar";
 import {CategoryFilterBar} from "../components/CategoryFilterBar";
 import {Drawer, Pagination} from "@mui/material";
-import {GoodItem} from "../components/GoodItem";
+import {ItemsBlock} from "../components/ItemsBlock";
+import {useAppDispatch, useAppSelector} from "../redux/hooks";
+import {setPage} from "../redux/slices/paginationSlice";
+import {DrawerPage} from "./DrawerPage";
 
-const arr = [1, 2, 3, 4, 5, 6, 7, 8]
 
 export const Main: FC = () => {
-  const [page, setPage] = useState(1)
+  const dispatch = useAppDispatch()
+  const {page} = useAppSelector(state => state.paginationReducer)
+  // const [page, setPage] = useState(1)
   const [openDrawer, setOpenDrawer] = useState(false)
+
+  const changePage = useCallback((num: number) => {
+    dispatch(setPage(num))
+  },[dispatch])
+
   return (
     <>
       <main className='w-full px-[100px] mt-[50px]'>
@@ -20,23 +29,20 @@ export const Main: FC = () => {
         <CategoryFilterBar/>
 
         {/*блок с товарами*/}
-        <div className='w-full grid grid-cols-4 gap-5 items-center justify-center mt-10'>
-
-          {arr.map(item => <GoodItem key={item}/>)}
-        </div>
+        <ItemsBlock/>
 
         {/*пагинация*/}
         <div className='flex items-center justify-center gap-8 mt-5 py-5'>
           <Pagination
             size={'large'}
             page={page}
-            onChange={(_, page) => setPage(page)}
+            onChange={(_, page) => changePage(page)}
             count={4}
             color="standard"/>
         </div>
       </main>
       <Drawer anchor={'right'} open={openDrawer} onClose={() => setOpenDrawer(false)}>
-        <div className='w-[300px]'></div>
+        <DrawerPage/>
       </Drawer>
     </>
   );
