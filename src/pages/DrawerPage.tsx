@@ -1,26 +1,35 @@
-import React, {FC} from 'react';
-import CloseIcon from '@mui/icons-material/Close';
+import React, {FC, memo, useMemo} from 'react';
+import {DrawerItem} from "../components";
+import {useGetDrawerItemsQuery} from "../redux/api/drawerApi";
+import {CircularProgress} from "@mui/material";
 
-export const DrawerPage: FC = () => {
+
+
+export const DrawerPage: FC = memo(() => {
+  const {data: drawerItems, isLoading} = useGetDrawerItemsQuery()
+
+  const total = useMemo(() => {
+    return drawerItems?.reduce((acc, val) => +acc + +val.price, 0)
+  },[drawerItems])
+
   return (
-    <div className='w-[25vw] flex flex-col items-center justify-start overflow-y-auto'>
-      <header className='px-[22px] py-[30px] w-full flex items-center justify-start border-b border-[#C7C7C7]'>
-        <p className='text-[20px] font-medium'>1 товар на сумму 9.999 Р</p>
-      </header>
-      <main className='w-full flex flex-col items-center justify-start'>
-        <div className='flex items-center justify-between px-[20px] py-[30px] border-b border-[#C7C7C7]'>
-          <div className='flex items-center justify-center gap-[18px]'>
-            <img className='w-[127px]' src="/assets/photos/tastyFood.jpg" alt="drawerItem"/>
-            <div className='flex flex-col items-center justify-start'>
-              <p className='text-[16px] font-medium'>Домашняя Паста Pesto</p>
-            </div>
-          </div>
-          <div className='flex items-center h-full justify-start flex-col'>
-            <CloseIcon/>
-          </div>
-        </div>
-      </main>
-    </div>
+    <>
+      {isLoading ? <CircularProgress/> :
+      <div className='w-[25vw] flex flex-col items-center justify-start overflow-y-auto'>
+        <header className='px-[22px] py-[30px] w-full flex items-center justify-start border-b border-[#C7C7C7]'>
+          <p
+            className='text-[20px] font-medium'> {drawerItems?.length} {drawerItems && (drawerItems?.length === 1 ? 'товар' : drawerItems?.length < 5 ? 'товара' : 'товаров')} на
+            сумму {total} Р</p>
+        </header>
+        <main className='w-full flex flex-col items-center justify-start'>
+
+          {drawerItems?.length === 0 ?
+            <p className='text-[20px] font-semibold mt-20'>Корзина пуста</p> :
+            drawerItems?.map(item => <DrawerItem {...item} key={item.id}/>)}
+        </main>
+      </div>}
+    </>
+
   );
-};
+});
 

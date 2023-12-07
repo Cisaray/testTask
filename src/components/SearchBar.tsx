@@ -1,14 +1,14 @@
-import React, {Dispatch, FC, SetStateAction} from 'react';
+import React, {Dispatch, FC, memo, SetStateAction} from 'react';
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import {useAppDispatch, useAppSelector} from "../redux/hooks";
-import {setSearch} from "../redux/slices/searchSlice";
+import {setSearch} from "../redux/slices";
 
 interface SearchBarProps {
   setOpenDrawer: Dispatch<SetStateAction<boolean>>
 }
 
-export const SearchBar:FC<SearchBarProps> = ({setOpenDrawer}) => {
+export const SearchBar:FC<SearchBarProps> = memo(({setOpenDrawer}) => {
   const dispatch = useAppDispatch()
   const {search} = useAppSelector(state => state.searchReducer)
   return (
@@ -31,5 +31,5 @@ export const SearchBar:FC<SearchBarProps> = ({setOpenDrawer}) => {
       </div>
     </div>
   );
-};
+});
 

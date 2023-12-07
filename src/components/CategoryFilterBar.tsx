@@ -1,8 +1,8 @@
-import React, {FC, useCallback, useState} from 'react';
-import {useAppDispatch, useAppSelector} from "../redux/hooks";
+import React, {FC, memo, useCallback, useState} from 'react';
+import {useAppDispatch} from "../redux/hooks";
 import {setCategory} from "../redux/slices";
 
-export const CategoryFilterBar: FC = () => {
+export const CategoryFilterBar: FC = memo(() => {
   const dispatch = useAppDispatch()
   // const {category} = useAppSelector(state => state.categoryReducer)
   const [clicked, setClicked] = useState<string>('Все товары');
@@ -31,5 +31,5 @@ export const CategoryFilterBar: FC = () => {
       </div>
     </div>
   );
-};
+});
 

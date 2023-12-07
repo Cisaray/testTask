@@ -1,46 +1,49 @@
-# Getting Started with Create React App
+# Тестовый проект для компании Performance Lab
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Этот проект был создан в качестве тестового задания для компании "Перфоманс Лаб". Он включает в себя основные возможности, а именно: создана страница магазина с несколькими категориями товаров, можно отфильтровать список по каждай категории, а так же найти товар по наименованию. Есть корзина, куда можно добавлять товары, удалять их.
 
-## Available Scripts
+##Этот проект использует следующие технологии и библиотеки:
 
-In the project directory, you can run:
+- [React](https://reactjs.org/): JavaScript-библиотека для построения пользовательских интерфейсов.
+- [Redux Toolkit](https://redux-toolkit.js.org/): Набор инструментов для эффективной работы с Redux с меньшим количеством кода.
+- [TypeScript](https://www.typescriptlang.org/): Статически типизированный суперсет JavaScript, добавляющий типы и другие мощные функции.
+- [React Redux](https://react-redux.js.org/): Официальная библиотека связи Redux для React.
+- [Emotion](https://emotion.sh/docs/introduction): Библиотека для написания стилей CSS в JavaScript.
+- [React Router Dom](https://reactrouter.com/): Стандартное решение для роутинга в React-приложениях.
+- [Material UI](https://mui.com/): Набор готовых к использованию компонентов из материал дизайна от Google.
 
-### `npm start`
+- [ReduxJS/Toolkit](https://redux-toolkit.js.org/): Набор инструментов Redux, включающий в себя управление состоянием, преобразователи и создание слайсов.
+- [TailwindCSS](https://tailwindcss.com/): Библиотека утилитарного CSS первого класса, которая позволяет вам создавать дизайн напрямую в ваших разметках.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Установка и запуск проекта
+Для установки и запуска проекта на локальной машине выполните следующие шаги:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Клонируйте репозиторий на свой локальный компьютер используя команду:
+git clone <ссылка на git репозиторий>
 
-### `npm test`
+2. Перейдите в корневую директорию проекта:
+cd <имя папки проекта>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Установите зависимости проекта:
+npm install
 
-### `npm run build`
+4. Запустите проект:
+npm start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Запуск JSON Server 
+JSON Server используется для создания фейкового API для тестирования и разработки.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Чтобы запустить JSON Server, выполните следующие шаги:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Убедитесь, что у вас установлен JSON Server. Если нет, установите его глобально на своей машине используя команду:
+npm install -g json-server
 
-### `npm run eject`
+2. Перейти в папку 'src':
+cd src
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. Запустите JSON Server используя db.json файл:
+json-server --watch db.json
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Теперь JSON Server должен быть запущен и доступен по адресу `http://localhost:3000`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Примечание:** Возможно, вам придется выбрать другой порт, если порт 3000 уже используется. Для этого используйте флаг --port во время запуска сервера, например: `json-server --watch db.json --port 3001`.

@@ -1,10 +1,8 @@
 import React, {FC, useCallback, useState} from 'react';
-import {SearchBar} from "../components/SearchBar";
-import {CategoryFilterBar} from "../components/CategoryFilterBar";
+import {SearchBar, CategoryFilterBar, ItemsBlock} from "../components";
 import {Drawer, Pagination} from "@mui/material";
-import {ItemsBlock} from "../components/ItemsBlock";
 import {useAppDispatch, useAppSelector} from "../redux/hooks";
-import {setPage} from "../redux/slices/paginationSlice";
+import {setPage} from "../redux/slices";
 import {DrawerPage} from "./DrawerPage";
 
 

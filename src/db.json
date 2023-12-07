@@ -210,5 +210,6 @@
       "price": "700",
       "category": "cloth"
     }
-  ]
+  ],
+  "drawer": []
 }
